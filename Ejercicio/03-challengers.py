@@ -39,16 +39,29 @@ palabra2 = input("Ingrese tu segunda palabra: ")
 
 
 def anagrama():
-    booleano
-    text3 = []
-    if palabra1 == palabra2:
-        return print("Tus dos palabras no pueden ser iguales")
-    for i in palabra1:
-        for k in palabra2:
-            if i==k:
-                text3.push(i)
-    return text3
+    if len(palabra1) != len(palabra2):
+        return False
+
+    contador_letras = {}
+
+    for letra in palabra1:
+        if letra in contador_letras:
+            contador_letras[letra] += 1
+        else:
+            contador_letras[letra] = 1
+
+    for letra in palabra2:
+        if letra in contador_letras:
+            contador_letras[letra] -= 1
+        else:
+            return False
+
+    for contador in contador_letras.values():
+        if contador != 0:
+            return False
+
+    return True
 
 
-
-anagrama()
+anagrama = anagrama()
+print(anagrama)
