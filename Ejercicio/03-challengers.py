@@ -34,8 +34,8 @@ No hace falta comprobar que ambas palabras existan
 Dos palabras exactamenre iguales no son anagrama
 """
 
-palabra1 = input("Ingrese tu primer palabra: ")
-palabra2 = input("Ingrese tu segunda palabra: ")
+# palabra1 = input("Ingrese tu primer palabra: ")
+# palabra2 = input("Ingrese tu segunda palabra: ")
 
 
 def anagrama():
@@ -63,5 +63,19 @@ def anagrama():
     return True
 
 
-anagrama = anagrama()
-print(anagrama)
+# print(anagrama())
+
+
+# Sucesion de fibonacci
+def fibonacci():
+    prev = 0
+    next = 1
+    for i in range(1, 51):
+        print(prev)
+
+        fib = prev + next
+        prev = next
+        next = fib
+
+
+# fibonacci()
